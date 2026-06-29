@@ -1,4 +1,4 @@
-public class Square extends Rectangle {
+public class Square extends Rectangle implements Resizeable {
     public Square() {
     }
 
@@ -29,11 +29,15 @@ public class Square extends Rectangle {
         setSide(length);
     }
 
+    // Phuong thuc resize da duoc xu ly tot o lop Rectangle (tang ca width va length)
+    // Nen ta chi can goi lai hoac de mac dinh no ke thua.
+    @Override
+    public void resize(double percent) {
+        super.resize(percent);
+    }
+
     @Override
     public String toString() {
-        return "A Square with side="
-                + getSide()
-                + ", which is a subclass of "
-                + super.toString();
+        return "A Square with side=" + getSide() + ", which is a subclass of " + super.toString();
     }
 }
