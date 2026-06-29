@@ -1,4 +1,4 @@
-public class Square extends Rectangle implements Resizeable {
+public class Square extends Rectangle implements Colorable {
     public Square() {
     }
 
@@ -29,11 +29,10 @@ public class Square extends Rectangle implements Resizeable {
         setSide(length);
     }
 
-    // Phuong thuc resize da duoc xu ly tot o lop Rectangle (tang ca width va length)
-    // Nen ta chi can goi lai hoac de mac dinh no ke thua.
+    // Trien khai phuong thuc cua interface Colorable
     @Override
-    public void resize(double percent) {
-        super.resize(percent);
+    public void howToColor() {
+        System.out.println("To mau ca bon canh (Color all four sides).");
     }
 
     @Override
